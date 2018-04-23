@@ -1,22 +1,20 @@
+							SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
+
+							       Stabilisasi Harga Daging
 
 
-SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
+									Untuk:
+							     Dinas Perdagangan Kota Malang
 
-Stabilisasi Harga Daging
+								  Dipersiapkan oleh:
+                                                                      Kelompok 8
+							       150535600490/Rani Maranita
+							       150535601013/Rizky Tri Jaya Saputra 
+							       150535603457/Widya Lestari
 
-
-Untuk:
-Dinas Perdagangan Kota Malang
-
-Dipersiapkan oleh:
-Kelompok 8
-150535600490/Rani Maranita
-150535601013/Rizky Tri Jaya Saputra 
-150535603457/Widya Lestari
-
-Program Studi S1 Teknik Informatika
-FT-UM
-Jl.Semarang 5 Malang 65145
+							       Program Studi S1 Teknik Informatika
+									      FT-UM
+								  Jl.Semarang 5 Malang 65145
 
 
 
@@ -141,17 +139,17 @@ Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasa
 Aplikasi client server ini akan berfungsi dengan spesifikasi :
 Server :
 Komputer dengan spesifikasi hardware minimal sebagai berikut :
-•	Processor Inter Core i3-2005U CPU 1.70GHz 
-•	Motherboard support internet connection RAM 4 GB
-•	500 GB Hard Disk utama Hard Disk Drive backup VGA Card 256 MB
-•	NIC FastEthernet atau Gigabit Ethernet Mouse
-•	Keyboard Monitor
-•	Power Supply
-•	Komputer yang minimal telah terinstall software sebagai berikut :
-•	Browser Google Chrome/Mozilla Firefox PDF
-•	Word Processor
-•	Apache HTTP Server Mail Server
-•	DBMS minimal MySQL 5.0.20 ke atas Koneksi internet dengan bandwidth 1 Mbps OS minimal Windows 2003 server atau Ubuntu Server
+â€¢	Processor Inter Core i3-2005U CPU 1.70GHz 
+â€¢	Motherboard support internet connection RAM 4 GB
+â€¢	500 GB Hard Disk utama Hard Disk Drive backup VGA Card 256 MB
+â€¢	NIC FastEthernet atau Gigabit Ethernet Mouse
+â€¢	Keyboard Monitor
+â€¢	Power Supply
+â€¢	Komputer yang minimal telah terinstall software sebagai berikut :
+â€¢	Browser Google Chrome/Mozilla Firefox PDF
+â€¢	Word Processor
+â€¢	Apache HTTP Server Mail Server
+â€¢	DBMS minimal MySQL 5.0.20 ke atas Koneksi internet dengan bandwidth 1 Mbps OS minimal Windows 2003 server atau Ubuntu Server
 Client :
 Device yang dapat terhubung internet
 
@@ -160,27 +158,27 @@ Device yang dapat terhubung internet
 Sistem Informasi Stabilisasi Harga Daging ini membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut:
 3.1.1	Antarmuka Pemakai
 User interface yang digunakan untuk mengoperasikan Sistem Informasi Stabilisasi Harga Daging antara lain:
-•	Tampilan awal web
-•	Tampilan sign in
-•	Tampilan pendaftaran
-•	Tampilan Harga Daging
-•	Tampilan Forum Jual Beli dan Diskusi
-•	Tampilan Form Informasi Harga Pasar
-•	Tampilan Grafik Diagram Harga
-•	Tampilan Form Informasi
+â€¢	Tampilan awal web
+â€¢	Tampilan sign in
+â€¢	Tampilan pendaftaran
+â€¢	Tampilan Harga Daging
+â€¢	Tampilan Forum Jual Beli dan Diskusi
+â€¢	Tampilan Form Informasi Harga Pasar
+â€¢	Tampilan Grafik Diagram Harga
+â€¢	Tampilan Form Informasi
 Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
-•	Keyboard
-•	Mouse
-•	Monitor
-•	PC/Laptop
-•	Browser
-•	Hp (jika mengakses via mobile)
+â€¢	Keyboard
+â€¢	Mouse
+â€¢	Monitor
+â€¢	PC/Laptop
+â€¢	Browser
+â€¢	Hp (jika mengakses via mobile)
 3.1.2	Antarmuka Perangkat Keras
 Antarmuka perangkat keras yang digunakan untuk mengoperasikan Sistem informasi ini antara lain:
-•	NIC FastEthernet atau Gigabit Ethernet
-•	Kabel LAN UTP RJ-45
-•	ASDL Modem
-•	Kabel telepon (aerial type)
+â€¢	NIC FastEthernet atau Gigabit Ethernet
+â€¢	Kabel LAN UTP RJ-45
+â€¢	ASDL Modem
+â€¢	Kabel telepon (aerial type)
 3.1.3	Antarmuka Perangkat Lunak
 Antarmuka perangkat lunak yang digunakan pada proses pembuatan aplikasi ini meliputi,
 -	XAMPP
@@ -188,9 +186,9 @@ Antarmuka perangkat lunak yang digunakan pada proses pembuatan aplikasi ini meli
 -	OwnCloud
 3.1.4	Antarmuka Komunikasi
 Antarmuka komunikasi yang digunakan untuk mengoperasikan sistem informasi ini antara lain:
-•	Kabel LAN UTP RJ-45
-•	ASDL Modem
-•	Kabel telepon (aerial type)
+â€¢	Kabel LAN UTP RJ-45
+â€¢	ASDL Modem
+â€¢	Kabel telepon (aerial type)
 
 3.2	Kebutuhan Fungsional
 Tabel 4 Kebutuhan Fungsional
