@@ -85,34 +85,46 @@ DAFTAR TABEL
 
 1.	Pendahuluan
 1.1	Tujuan Penulisan Dekumen
-Tujuan penulisan dokumen adalah guna menjabarkan spesifikasi kebutuhan perangkat lunak yang akan digunakan oleh Dinas Perdagangan Kota Malang. Penjabaran yang dilakukan meliputi penjabaran mengenai spesifikasi perangkat lunak yang terkait dengan deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dikembangan untuk Dinas Perdagangan Kota Malang bernama SHD (Stabilisasi Harga Daging). 
+Tujuan penulisan dokumen adalah guna menjabarkan spesifikasi kebutuhan perangkat lunak yang akan digunakan oleh Dinas Perdagangan 
+Kota Malang. Penjabaran yang dilakukan meliputi penjabaran mengenai spesifikasi perangkat lunak yang terkait dengan deskripsi umum
+perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dikembangan untuk Dinas Perdagangan Kota Malang bernama SHD (Stabilisasi Harga Daging). 
 1.2	Lingkungan Masalah
-SHD (Stabilisasi Harga Daging) merupakan sebuah sistem informasi berbasis yang menyajikan informasi terkait harga-harga daging yang ada diberbagai wilayah yang ada dikota malang kemudian berdasarkan harga-harga tersebut akan diambil harga rata-rata sebagai harga pasar daging pada periode tersebut. Pengguna dari SHD (Stabilisasi Harga Daging) meliputi penjual daging dan juga pembeli daging sedangkan, dinas perdagangan kota malang berfungsi sebagai admin yang melakukan pengolahan terhadap data. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat informasi, dan mengisi harga daging. Aktifitas yang bisa dilakukan oleh pembeli daging adalah melihat informasi pada SHD dan memberikan informasi harga daging yang terdapat pada wilayah tertentu, hal tersebut dilakukan guna mengantisipasi kecurangan yang mungkin dilakukan oleh pedagang. Aktifitas yang bisa dilakukan oleh memasukan harga daging dan lokasi berdagang. Selain pihak-pihak yang telah disebutkan ada beberapa pihak yang ikut terlibat dalam pengoperasian sistem perangkat lunak ini pihak tersebut meliputi beberapa dinas-dinas lain. Dinas-dinas lain yang terlibat berfungsi untuk memastikan data yang digunakan pada pengoperasian sistem ini akurat sehingga segala macam aktifikas yang terjadi dalam SHD dapat dipertanggungjawabkan.
+SHD (Stabilisasi Harga Daging) merupakan sebuah sistem informasi berbasis yang menyajikan informasi terkait harga-harga daging yang ada
+diberbagai wilayah yang ada dikota malang kemudian berdasarkan harga-harga tersebut akan diambil harga rata-rata sebagai harga pasar
+daging pada periode tersebut. Pengguna dari SHD (Stabilisasi Harga Daging) meliputi penjual daging dan juga pembeli daging sedangkan,
+dinas perdagangan kota malang berfungsi sebagai admin yang melakukan pengolahan terhadap data. Pengguna perangkat lunak dapat melakukan
+pendaftaran, sign in, melihat informasi, dan mengisi harga daging. Aktifitas yang bisa dilakukan oleh pembeli daging adalah melihat
+informasi pada SHD dan memberikan informasi harga daging yang terdapat pada wilayah tertentu, hal tersebut dilakukan guna mengantisipasi
+kecurangan yang mungkin dilakukan oleh pedagang. Aktifitas yang bisa dilakukan oleh memasukan harga daging dan lokasi berdagang. Selain
+pihak-pihak yang telah disebutkan ada beberapa pihak yang ikut terlibat dalam pengoperasian sistem perangkat lunak ini pihak tersebut
+meliputi beberapa dinas-dinas lain. Dinas-dinas lain yang terlibat berfungsi untuk memastikan data yang digunakan pada pengoperasian sistem ini akurat sehingga segala macam aktifikas yang terjadi dalam SHD dapat dipertanggungjawabkan.
 1.3	Definisi, Istilah dan Singkatan
 Definisi, istilah serta singkatan yang digunakan dalam dokumen :
 Tabel 1 Definisi, istilah dan singkatan
-Definisi, Istilah dan/atau Singkatan	Penjelasan 
-DFD	Data Flow Diagram. Diagram yang menggambarkan aliran data
-ERD	Entity Relationship diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya
+Definisi	Istilah dan/atau Singkatan			Penjelasan 
+DFD		Data Flow Diagram. 				Diagram yang menggambarkan aliran data
+ERD		Entity Relationship diagram. 			Diagram yang menggambarkan entitas suatu objek beserta relasinya
 Interface	Antarmuka antara perangkat lunak dan pengguna
 Data Store	Tempat penyimpanan data
+
 1.4	Aturan Penomoran
-Nama-ID	Aturan Penamaan	Deskripsi
-Kebutuhan Fungsional	SRS-F-IN/PR/OUT-xxx	SRS adalah System Requirement  Summary,
-F adalah Fungsional,
-IN menunjukan operasi Input,
-PR menunjukan operasi proses,
-OUT menunjukan output
-Xxx adalah nomor SRS-ID
-Kebutuhan Non Fungsional	SRS-NF-IN/PR/OUT-xxx	SRS adalah System Requirement  Summary,
-F adalah Fungsional,
-IN menunjukan operasi Input,
-PR menunjukan operasi proses,
-OUT menunjukan output
-Xxx adalah nomor SRS-ID
-Bubble	DFD-X-Y.Z	DFD adalah Data Flow Diagram
-X adalah nomor lavel diagram
-Y.Z adalah nomor pada bubble diagram
+Nama-ID				Aturan Penamaan					Deskripsi
+Kebutuhan Fungsional		SRS-F-IN/PR/OUT-xxx				SRS adalah System Requirement  Summary,
+										F adalah Fungsional,
+										IN menunjukan operasi Input,
+										PR menunjukan operasi proses,
+										OUT menunjukan output
+										Xxx adalah nomor SRS-ID
+										
+Kebutuhan Non Fungsional	SRS-NF-IN/PR/OUT-xxx				SRS adalah System Requirement  Summary,
+										F adalah Fungsional,
+										IN menunjukan operasi Input,
+										PR menunjukan operasi proses,
+										OUT menunjukan output
+										Xxx adalah nomor SRS-ID
+Bubble				DFD-X-Y.Z					DFD adalah Data Flow Diagram
+										X adalah nomor lavel diagram
+										Y.Z adalah nomor pada bubble diagram
 1.5	Deskripsi Umum Dokumen (Ikhtisar)
 Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan beberapa bagian besar yang terdiri dari pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan. Bagian pendahuluan berisi tujuan penulisan dokumen yang menjelaskan alasan pembuatan dokumen, lingkup masalah yang berisi ringkasan deskripsi dari aplikasi yang akan dibuat, definisi, istilah dan singkatan yang digunakan dalam dokumen, aturan penomoran yang digunakan dalam dokumen, dan ikhtisar dokumen ini. Bagian deskripsi umum perangkat lunak berisi deskripsi umum dari sistem yang dibuat, karakteristik pengguna sistem, batasan yang dipakai dalam perangkat lunak itu sendiri, dan lingkungan operasi yang diperuntukan bagi perangkat lunak yang dibuat. Bagian deskripsi kebutuhan di dalam dokumen terdiri dari kebutuhan antarmuka eksternal, kebutuhan fungsional, kebutuhan non fungsional, kebutuhan data, batasan perancangan perangkat lunak, keruntunan, dan ringkasan dari kebutuhan perangkat lunak, baik itu kebutuhan fungsional maupun kebutuhan non fungsional. Kebutuhan antarmuka eksternal meliputi antarmuka pemakai, antarmuka perangkat keras, antarmuak perangkat lunak, dan antarmuka komunikasi. Kebutuhan fungsional dan kebutuhan non fungsional perangkat lunak diuraikan dengan lengkap di bagian ini dan ringkasan dari kebutuhan perangkat lunak yang dibuat disertakan dalam dokumen ini. Kebutuhan fungsional perangkat lunak digambarkan dalam bentuk Data Flow Diagram (DFD), di mana DFD yang dibuat meliputi diagram konteks, DFD level 1, dan DFD level 2. Data store dari DFD yang dibuat pun dijelaskan di dalam dokumen ini. Selain DFD, kebutuhan fungsional perangkat lunak digambarkan dalam spesifikasi proses. Kebutuhan data dari perangkat lunak digambarkan dalam Entity Relationship Diagram (E-R Diagram). Batasan perancangan dari perangkat lunak yang akan dibuat tentunya harus dijelaskan dalam dokumen ini agar pengembang perangkat lunak lebih mudah dalam melakukan pekerjaannya. Keruntunan dari perangkat lunak yang dibuat digambarkan dengan cara mapping kebutuhan fungsional dengan proses pada DFD dan mapping data store DFD dengan Entity-Relationship Diagram.
 2.	Deskripsi Umum Perangkat Lunak
