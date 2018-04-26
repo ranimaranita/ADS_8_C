@@ -1,0 +1,137 @@
+﻿*{
+	margin:0px;
+	padding:0px;
+}
+	body{
+		font-family: verdana;
+		background-color: #ABC;
+		padding:50px;
+		margin-left:20px;
+		margin-right:20px;
+	}
+	h3{
+		margin-right: 50px;
+		padding-left:220px;
+		float:left;
+	}
+	ul#menu, ul.submenu1{
+		list-style-type:none;
+		font-size:10pt;
+		outline:5px solid red;
+	}
+
+	ul#menu li{
+		width:1px solid red;
+		width:125px;
+		text-align:center;
+		position: relative;
+		float:left;
+		margin-right:8px;
+	}
+	ul#menu a{
+		text-decoration:none;
+		display:block;
+		width:120px;
+		height:25px;
+		line-height:25px;
+		background-color:#fff;
+		border:1px solid #CCC;
+		border-radius:5px;
+	}
+
+	ul#menu .submenu1 a{
+		margin-top:0px;
+	}
+
+	ul#menu .submenu1 li{
+		border: 0px solid green;
+		margin-top:5px;
+	}
+
+	ul#menu li:hover > a {
+		background-color: #CFC;
+	}
+
+	ul#menu li:hover a:hover{
+		background-color: #FF0;
+	}
+
+	ul#menu ul.submenu1{
+		display:none;
+		position: absolute;
+		top:25px;
+		left:0px
+	}
+
+	ul#menu li:hover .submenu1{
+		display:block;
+	}
+	
+	.informasi{
+		width: 500px;
+		border: 2px solid black;
+		margin: auto;
+		padding:5px;
+		height:100px;
+		margin-top:90px;
+	}
+
+	.tanggal{
+		background-color:salmon;
+		width:100px;
+		height:50px;
+		float:left;
+		margin-right:10px;
+	}
+
+	.jenisdaging{
+		background-color:limegreen;
+		width:100px;
+		height:50px;
+		float:left;
+		margin-right:10px;
+	}
+
+	.daerah{
+		background-color:gray;
+		width:100px;
+		height:50px;
+		float:left;
+		margin-right:10px;
+	}
+
+	.harga{
+		background-color:green;
+		width:100px;
+		height:50px;
+		float:left;
+		margin-right:10px;
+	}
+	.listhargadaerah{
+		width:200px;
+		height:300px;
+		border:2px solid black;
+		float:right;
+		margin-right:10px;
+		margin-top:20px;
+	}
+
+	.diagrambatang{
+		width:900px;
+		height:300px;
+		border:2px solid black;
+		margin-top:20px;
+	}
+	.daerahdaerah{
+		width:1190px;
+		height:300px;
+		margin-top:40px;
+		border:2px solid black;
+		border-top:5px solid red;
+	}
+
+
+
+	.footer{
+		text-align:center;
+	}
