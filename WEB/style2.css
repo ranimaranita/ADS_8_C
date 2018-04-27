@@ -77,8 +77,8 @@
 	}
 
 	.tanggal{
-		background-color:salmon;
-		width:100px;
+		background-color:n6ne;
+		width:130px;
 		height:50px;
 		float:left;
 		margin-right:10px;
@@ -123,15 +123,184 @@
 		margin-top:20px;
 	}
 	.daerahdaerah{
-		width:1190px;
-		height:300px;
-		margin-top:40px;
-		border:2px solid black;
-		border-top:5px solid red;
+		width: 1200px;
+		border: 2px solid black;
+		margin: auto;
+		padding:5px;
+		height:400px;
+		margin-top:90px;
+		text-float:left;
 	}
 
+	.daerah1{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-left:11px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		
+	}
 
+	.daerah2{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		line-height:150px;
+		text-align:center;
+		margin-left:11px;
+	}
 
+	.daerah3{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		line-height:150px;
+		text-align:center;
+		margin-left:11px;
+		margin-top:20px;
+	}
+
+	.daerah4{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-top:20px;
+		margin-right:10px;
+		line-height:150px;
+		text-align:center;
+		margin-left:11px;
+	}
+
+	.daerah5{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		line-height:150px;
+		text-align:center;
+		margin-left:11px;
+	}
+
+	.daerah6{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		line-height:150px;
+		text-align:center;
+		margin-left:11px;
+	}
+	
+	.daerah7{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah8{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-left:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah9{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah10{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah11{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah12{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah13{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
+
+	.daerah14{
+		background-color:gray;
+		width:150px;
+		height:150px;
+		float:left;
+		margin-right:10px;
+		margin-top:20px;
+		text-align:center;
+		line-height:150px;
+		margin-left:11px;
+	}
 	.footer{
 		text-align:center;
 	}
