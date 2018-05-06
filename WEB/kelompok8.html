@@ -1,65 +1,82 @@
 ﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Informasi Harga Daging Sapi</title>
 
-<html>
-	<head>
-			<title> DESAIN</title>
-			<link rel="stylesheet" type="text/css" href="style2.css">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-			<!-- Tab Menu -->
-		 <ul id="menu">
-			<h3>Informasi Harga Daging</h3>
-		
-			<li><a href="#">Beranda</a></li>
-			<li><a href="#">Tabel Harga</a></li>
-			<li><a href="#">Informasi</a>
-				<ul class="submenu1">
-					<li><a href="#">Account</a></li>
-					<li><a href="#">Account</a></li>
-					<li><a href="#">Account</a>
-					</li>
-				</ul>
-			</li>
-			<li><a href="#">Informasi</a></li>
-		</ul>
-	</head>
+  <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Daging Kualitas 1', 'Daging Kualitas 2'],
+          ['2010',  110000,      95000],
+          ['2011',  140000,      100000],
+          ['2012',  115000,       90000],
+          ['2013',  150000,      120000],
+          ['2014',  120000,      97000],
+          ['2015',  130000,      100000],
+          ['2016',  140000,      125000],
+          ['2017',  120000,      94000],
+        ]);
+
+        var options = {
+          title: 'Grafik Harga Daging / tahun',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+      </script>
+</head>
 <body>
-	<!--Informasi Tanggal -->
-	<div class="informasi">
-		<div class="tanggal">
-			<form action="#">
-			Tanggal:
-			<input type="date" names "tanggal">
-			</form>
-		</div>
-		<div class="jenisdaging"></div>
-		<div class="daerah"></div>
-		<div class="harga"></div>
-	</div>
-	<div class="listhargadaerah">
-		adadwdadawdad
-	</div>
-	<div class="diagrambatang">rggggggggggg</div>
-		<div class="daerahdaerah">
-			<div class="teks">Info Harga daerah</div>
-			<div class="daerah1">1</div>
-			<div class="daerah2">2</div>
-			<div class="daerah3">3</div>
-			<div class="daerah4">4</div>
-			<div class="daerah5">5</div>
-			<div class="daerah6">6</div>
-			<div class="daerah6">7</div>
-			<div class="daerah6">8</div>
-			<div class="daerah6">9</div>
-			<div class="daerah6">10</div>
-			<div class="daerah6">11</div>
-			<div class="daerah6">12</div>
-			<div class="daerah6">13</div>
-			<div class="daerah6">14</div>
-		</div>
-	</div>
-	<div class="footer">
-	<p>Copyright &copy; Kelompok 8 TIC 2018
-	</div>
-</body>
+  <nav class="blue-grey darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="logo.png" height="45" alt="logo"></a> 
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tabel Harga</a></li>
+        <li><a href="#">Informasi</a></li>
+        <li><a href="#"><i class="material-icons">account_circle</i></a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h3 class="header center black-text">Informasi Harga Daging Sapi</h3>
+      <h4 class="header center black-text">Kota Malang, Jawa Timur</h4>
+      <br>
+    </div>
+  </div>
+
+  <div id="curve_chart" style="width: 900px; height: 500px" ></div>
+
+  <footer class="page-footer blue-grey darken-4">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="white-text text-lighten-3" href="http://materializecss.com">Kelompok 8</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>
