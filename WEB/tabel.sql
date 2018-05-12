@@ -1,0 +1,1 @@
+create table tabel ( no int (10), wilayah varchar(25), tanggal date);
