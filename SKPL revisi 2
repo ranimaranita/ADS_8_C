@@ -1,5 +1,6 @@
 
 
+
 SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
 
 Stabilisasi Harga Daging
@@ -48,35 +49,6 @@ Daftar Halaman Perubahan
 Halaman	Revisi	Halaman	Revisi
 			
 			
-
-
-
-
-
-
-
-
-DAFTAR ISI
-DAFTAR GAMBAR
-DAFTAR TABEL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -284,9 +256,13 @@ DFD-1-2.3	Data keanggotaan dari pengguna sistem dapat diarsipkan dengan cara dic
 DFD-2-2.1	
 
 3.2.4	Data Store
+Data Store	Deskripsi
+T_Anggota	Berisi deskripsi pendaftaran akun meliputi nama, email dan password.
+T_Daging	Berisi deskripsi aktifitas yang dilakukan sistem informasi meliputi lokasi penjualan daging, harga daging dari pembeli dan penjual
+
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
-(terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
+ 
 3.4	Kebutuhan Non Fungsional
 Kebutuhan non fungsional yang terdapat pada perangkat lunak SDH antara lain sebagai berikut.
 Tabel 7 Kebutuhan non fungsional
@@ -310,10 +286,52 @@ Berikut ini adalah tabel yang berisi traceability dari hasil analisis kebutuhan 
 3.6.1	Kebutuhan Fungsional vs Proses
 Mapping kebutuhan fungsional dengan proses pada DFD untuk perangkat lunak SHD adalah sebagai berikut.
 Tabel 8 Kebutuhan Fungsional vs proses
+ID Kebutuhan Fungsional	Nomor Proses pada DFD
+SRS-F-OUT-001	DFD-2-2.1
+SRS-F-OUT-002	DFD-2-2.2
+SRS-F-IN-003	DFD-2-2.3
+SRS-F-PR-004	DFD-2-2.3
+SRS-F-OUT-005	DFD-2-5.1, DFD-2-5.2
+SRS-F-PR-006	DFD-2-5.3
+SRS-F-IN-007	DFD-2-2.3
+SRS-F-OUT-008	DFD-2-3.1
+SRS-F-PR-009	DFD-2-5.1, DFD-2-5.2
+SRS-F-PR-010	DFD-2-4.2
+SRS-F-PR-011	DFD-2-3.2
 
 3.6.2	Data Store vs E-R
 Mapping data store DFD dengan Entity-Relasi untuk perangkat lunak SHD adalah sebagai berikut :
-Tabel 9 Data Store vs E-R
+Tabel 9 Data store vs E-R
+Data Store	Entity	Relasi
+T_Harga		
+T_Daging		
+
 3.7	Ringkasan Kebutuhan
+Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional 
+dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi,
+dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua
+kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan perangkat lunak Super
+SHD.
 3.7.1	Kebutuhan Fungsional
+ID	Kebutuhan
+SRS-F-OUT-001	Perangkat lunak bisa menampilkan form login
+SRS-F-OUT-002	Perangkat lunak bisa menampilkan form pendaftaran sebagai pengguna.
+SRS-F-IN-003	Perangkat lunak dapat menerima masukan dari pengguna.
+SRS-F-OUT-005	Sistem menampilkan harga standar daging pada periode tersebut.
+SRS-F-PR-006	Sistem menyediakan menu pencaraian
+SRS-F-OUT-007	Sistem dapat menampilkan informasi cara memilih daging yang baik
+SRS-F-IN-008	Sistem dapat menerima masukan data dari pengguna
+SRS-F-PR-009	Sistem dapat menyimpan data pengguna
+SRS-F-OUT-010	Perangkat lunak akan mengirimkan notifikasi apabila terjadi pembaruan data
 3.7.2	Kebutuhan Non Fungsional
+ID	Kebutuhan
+SRS-NF-OUT-011	Perangkat lunak dapat beroperasi setiap hari dan setiap jam.
+SRS-NF-OUT-012	Tampilan antarmuka perangkat lunak SHD mudah dipahami dan dioperasikan user.
+SRS-NF-PR-013	Perangkat lunak bisa dioperasikan pada platform android
+SRS-NF-PR-014	Perangkat lunak akan mengirimkan notifikasi atau peringatan apabila terjadi perubahan data atau informasi pada perangkat lunak
+SRS-NF-PR-015	Perangkat lunak dapat melakukan ypdate data
+SRS-NF-PR-016	Perangkat lunak menggunakan standar enkripsi yang ada
+SRS-NF-IN-017	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 6 karakter
+SRS-NF-OUT-018	Bahasa yang disediakan pada perangkat lunak menggunakan bahasa Indonesia
+SRS-NF-OUT-019	Setiap layer harus menggunakan logo dari Dinas Perdagangan Kota Malang
+
