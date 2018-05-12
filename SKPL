@@ -1,152 +1,336 @@
-1.	Pendahuluan
-    1.1	Tujuan Penulisan Dekumen
-        Tujuan penulisan dokumen adalah guna menjabarkan spesifikasi kebutuhan perangkat lunak yang akan digunakan oleh Dinas Perdagangan
-        Kota Malang. Penjabaran yang dilakukan meliputi penjabaran mengenai spesifikasi perangkat lunak yang terkait dengan deskripsi
-        umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dikembangan untuk Dinas Perdagangan Kota
-        Malang bernama SHD (Stabilisasi Harga Daging). 
-    1.2	Lingkungan Masalah  
-        SHD (Stabilisasi Harga Daging) merupakan sebuah sistem informasi berbasis yang menyajikan informasi terkait harga-harga daging
-        yang ada diberbagai wilayah yang ada dikota malang kemudian berdasarkan harga-harga tersebut akan diambil harga rata-rata sebagai
-        harga pasar daging pada periode tersebut. Pengguna dari SHD (Stabilisasi Harga Daging) meliputi penjual daging dan juga pembeli
-        daging sedangkan, dinas perdagangan kota malang berfungsi sebagai admin yang melakukan pengolahan terhadap data. Pengguna
-        perangkat lunak dapat melakukan pendaftaran, sign in, melihat informasi, dan mengisi harga daging. Aktifitas yang bisa dilakukan
-        oleh pembeli daging adalah melihat informasi pada SHD dan memberikan informasi harga daging yang terdapat pada wilayah tertentu,
-        hal tersebut dilakukan guna mengantisipasi kecurangan yang mungkin dilakukan oleh pedagang. Aktifitas yang bisa dilakukan oleh
-        memasukan harga daging dan lokasi berdagang. Selain pihak-pihak yang telah disebutkan ada beberapa pihak yang ikut terlibat dalam
-        pengoperasian sistem perangkat lunak ini pihak tersebut meliputi beberapa dinas-dinas lain. Dinas-dinas lain yang terlibat
-        berfungsi untuk memastikan data yang digunakan pada pengoperasian sistem ini akurat sehingga segala macam aktifikas yang terjadi
-        dalam SHD dapat dipertanggungjawabkan.
-    1.3	Definisi, Istilah dan Singkatan
-        Definisi, istilah serta singkatan yang digunakan dalam dokumen :
-        1. DFD =	Data Flow Diagram. Diagram yang menggambarkan aliran data
-        2. ERD	= Entity Relationship diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya
-        3. Interface = Antarmuka antara perangkat lunak dan pengguna
-        4. Data Store = Tempat penyimpanan data
-    1.4	Aturan Penomoran
-        * Kebutuhan Fungsional : SRS-F-IN/PR/OUT-xxx : SRS adalah System Requirement  Summary, F adalah Fungsional, IN menunjukan operasi
-          Input, PR menunjukan operasi proses, OUT menunjukan output Xxx adalah nomor SRS-ID
-        * Kebutuhan Non Fungsional - SRS-NF-IN/PR/OUT-xxx	- SRS adalah System Requirement  Summary, F adalah Fungsional, IN menunjukan
-          operasi Input, PR menunjukan operasi proses, OUT menunjukan output Xxx adalah nomor SRS-ID
-        * Bubble - DFD-X-Y.Z	- DFD adalah Data Flow Diagram X adalah nomor lavel diagram, Y.Z adalah nomor pada bubble diagram
-    1.5	Deskripsi Umum Dokumen (Ikhtisar)
-        Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan beberapa bagian besar yang terdiri dari pendahuluan,
-        deskripsi umum perangkat lunak, dan deskripsi kebutuhan. Bagian pendahuluan berisi tujuan penulisan dokumen yang menjelaskan
-        alasan pembuatan dokumen, lingkup masalah yang berisi ringkasan deskripsi dari aplikasi yang akan dibuat, definisi, istilah dan
-        singkatan yang digunakan dalam dokumen, aturan penomoran yang digunakan dalam dokumen, dan ikhtisar dokumen ini. Bagian deskripsi
-        umum perangkat lunak berisi deskripsi umum dari sistem yang dibuat, karakteristik pengguna sistem, batasan yang dipakai dalam
-        perangkat lunak itu sendiri, dan lingkungan operasi yang diperuntukan bagi perangkat lunak yang dibuat. Bagian deskripsi
-        kebutuhan di dalam dokumen terdiri dari kebutuhan antarmuka eksternal, kebutuhan fungsional, kebutuhan non fungsional, kebutuhan
-        data, batasan perancangan perangkat lunak, keruntunan, dan ringkasan dari kebutuhan perangkat lunak, baik itu kebutuhan
-        fungsional maupun kebutuhan non fungsional. Kebutuhan antarmuka eksternal meliputi antarmuka pemakai, antarmuka perangkat keras,
-        antarmuak perangkat lunak, dan antarmuka komunikasi. Kebutuhan fungsional dan kebutuhan non fungsional perangkat lunak diuraikan
-        dengan lengkap di bagian ini dan ringkasan dari kebutuhan perangkat lunak yang dibuat disertakan dalam dokumen ini. Kebutuhan
-        fungsional perangkat lunak digambarkan dalam bentuk Data Flow Diagram (DFD), di mana DFD yang dibuat meliputi diagram konteks,
-        DFD level 1, dan DFD level 2. Data store dari DFD yang dibuat pun dijelaskan di dalam dokumen ini. Selain DFD, kebutuhan
-        fungsional perangkat lunak digambarkan dalam spesifikasi proses. Kebutuhan data dari perangkat lunak digambarkan dalam Entity
-        Relationship Diagram (E-R Diagram). Batasan perancangan dari perangkat lunak yang akan dibuat tentunya harus dijelaskan dalam
-        dokumen ini agar pengembang perangkat lunak lebih mudah dalam melakukan pekerjaannya. Keruntunan dari perangkat lunak yang
-        dibuat digambarkan dengan cara mapping kebutuhan fungsional dengan proses pada DFD dan mapping data store DFD dengan
-        Entity-Relationship Diagram.
 
+
+SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
+
+Stabilisasi Harga Daging
+
+
+Untuk:
+Dinas Perdagangan Kota Malang
+
+Dipersiapkan oleh:
+Kelompok 8
+150535600490/Rani Maranita
+150535601013/Rizky Tri Jaya Saputra 
+150535603457/Widya Lestari
+
+Program Studi S1 Teknik Informatika
+FT-UM
+Jl.Semarang 5 Malang 65145
+
+
+
+
+
+
+DAFTAR PERUBAHAN
+Revisi	Deskripsi
+A	Memperbaiki laporan sebelumnya
+B	Memperbaiki laporan sebelumnya
+C	Memperbaiki laporan sebelumnya
+D	
+
+INDEX	-	A	B	C	D	E	F	G
+TGL								
+Ditulis								
+oleh								
+								
+Diperiksa								
+oleh								
+								
+Disetujui								
+oleh								
+								
+
+Daftar Halaman Perubahan
+
+
+Halaman	Revisi	Halaman	Revisi
+			
+			
+
+
+
+
+
+
+
+
+1.	Pendahuluan
+1.1	Tujuan Penulisan Dekumen
+Tujuan penulisan dokumen adalah guna menjabarkan spesifikasi kebutuhan perangkat lunak yang akan digunakan oleh Dinas Perdagangan Kota Malang. Penjabaran yang dilakukan meliputi penjabaran mengenai spesifikasi perangkat lunak yang terkait dengan deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dikembangan untuk Dinas Perdagangan Kota Malang bernama SHD (Stabilisasi Harga Daging). 
+1.2	Lingkungan Masalah
+SHD (Stabilisasi Harga Daging) merupakan sebuah sistem informasi berbasis yang menyajikan informasi terkait harga-harga daging yang ada diberbagai wilayah yang ada dikota malang kemudian berdasarkan harga-harga tersebut akan diambil harga rata-rata sebagai harga pasar daging pada periode tersebut. Pengguna dari SHD (Stabilisasi Harga Daging) meliputi penjual daging dan juga pembeli daging sedangkan, dinas perdagangan kota malang berfungsi sebagai admin yang melakukan pengolahan terhadap data. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat informasi, dan mengisi harga daging. Aktifitas yang bisa dilakukan oleh pembeli daging adalah melihat informasi pada SHD dan memberikan informasi harga daging yang terdapat pada wilayah tertentu, hal tersebut dilakukan guna mengantisipasi kecurangan yang mungkin dilakukan oleh pedagang. Aktifitas yang bisa dilakukan oleh memasukan harga daging dan lokasi berdagang. Selain pihak-pihak yang telah disebutkan ada beberapa pihak yang ikut terlibat dalam pengoperasian sistem perangkat lunak ini pihak tersebut meliputi beberapa dinas-dinas lain. Dinas-dinas lain yang terlibat berfungsi untuk memastikan data yang digunakan pada pengoperasian sistem ini akurat sehingga segala macam aktifikas yang terjadi dalam SHD dapat dipertanggungjawabkan.
+1.3	Definisi, Istilah dan Singkatan
+Definisi, istilah serta singkatan yang digunakan dalam dokumen :
+Tabel 1 Definisi, istilah dan singkatan
+Definisi, Istilah dan/atau Singkatan	Penjelasan 
+DFD	Data Flow Diagram. Diagram yang menggambarkan aliran data
+ERD	Entity Relationship diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya
+Interface	Antarmuka antara perangkat lunak dan pengguna
+Data Store	Tempat penyimpanan data
+1.4	Aturan Penomoran
+Nama-ID	Aturan Penamaan	Deskripsi
+Kebutuhan Fungsional	SRS-F-IN/PR/OUT-xxx	SRS adalah System Requirement  Summary,
+F adalah Fungsional,
+IN menunjukan operasi Input,
+PR menunjukan operasi proses,
+OUT menunjukan output
+Xxx adalah nomor SRS-ID
+Kebutuhan Non Fungsional	SRS-NF-IN/PR/OUT-xxx	SRS adalah System Requirement  Summary,
+F adalah Fungsional,
+IN menunjukan operasi Input,
+PR menunjukan operasi proses,
+OUT menunjukan output
+Xxx adalah nomor SRS-ID
+Bubble	DFD-X-Y.Z	DFD adalah Data Flow Diagram
+X adalah nomor lavel diagram
+Y.Z adalah nomor pada bubble diagram
+1.5	Deskripsi Umum Dokumen (Ikhtisar)
+Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan beberapa bagian besar yang terdiri dari pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan. Bagian pendahuluan berisi tujuan penulisan dokumen yang menjelaskan alasan pembuatan dokumen, lingkup masalah yang berisi ringkasan deskripsi dari aplikasi yang akan dibuat, definisi, istilah dan singkatan yang digunakan dalam dokumen, aturan penomoran yang digunakan dalam dokumen, dan ikhtisar dokumen ini. Bagian deskripsi umum perangkat lunak berisi deskripsi umum dari sistem yang dibuat, karakteristik pengguna sistem, batasan yang dipakai dalam perangkat lunak itu sendiri, dan lingkungan operasi yang diperuntukan bagi perangkat lunak yang dibuat. Bagian deskripsi kebutuhan di dalam dokumen terdiri dari kebutuhan antarmuka eksternal, kebutuhan fungsional, kebutuhan non fungsional, kebutuhan data, batasan perancangan perangkat lunak, keruntunan, dan ringkasan dari kebutuhan perangkat lunak, baik itu kebutuhan fungsional maupun kebutuhan non fungsional. Kebutuhan antarmuka eksternal meliputi antarmuka pemakai, antarmuka perangkat keras, antarmuak perangkat lunak, dan antarmuka komunikasi. Kebutuhan fungsional dan kebutuhan non fungsional perangkat lunak diuraikan dengan lengkap di bagian ini dan ringkasan dari kebutuhan perangkat lunak yang dibuat disertakan dalam dokumen ini. Kebutuhan fungsional perangkat lunak digambarkan dalam bentuk Data Flow Diagram (DFD), di mana DFD yang dibuat meliputi diagram konteks, DFD level 1, dan DFD level 2. Data store dari DFD yang dibuat pun dijelaskan di dalam dokumen ini. Selain DFD, kebutuhan fungsional perangkat lunak digambarkan dalam spesifikasi proses. Kebutuhan data dari perangkat lunak digambarkan dalam Entity Relationship Diagram (E-R Diagram). Batasan perancangan dari perangkat lunak yang akan dibuat tentunya harus dijelaskan dalam dokumen ini agar pengembang perangkat lunak lebih mudah dalam melakukan pekerjaannya. Keruntunan dari perangkat lunak yang dibuat digambarkan dengan cara mapping kebutuhan fungsional dengan proses pada DFD dan mapping data store DFD dengan Entity-Relationship Diagram.
 2.	Deskripsi Umum Perangkat Lunak
-    2.1	Deskripsi Umum Sistem
-        SHD merupakan sistem informasi berbasis web yang menyediakan daftar harga daging. Pengguna sistem informasi SHD dapat melakukan
-        pendaftaran sebagai pembeli dan pendaftaran sebagai penjual daging. Pengguna yang telah terdaftar dapat melakukan sign in ke
-        dalam sistem informasi SHD. Pembeli yang telah melakukan sign in dapat melihat informasi harga daging yang tersedia dalam sistem
-        informasi. Informasi yang disediakan oleh sistem informasi meliputi harga daging dan lokasi penjualan daging. Pada aplikasi
-        tersedia form yang ditujukan untuk pembeli guna diisi informasi mengenai harga daging yang ada dilapangan oleh pembeli.
-        Notifikasi pembaruan informasi yang dilakukan pada sistem informasi akan dikirim melalui email pengguna. Apabila jumlah
-        persediaan daging yang tersedia telah habis atau terbatas, maka aplikasi akan mengirimkan notifikasi perihal kondisi tersebut.
-        Sistem ini dikelola oleh seorang admin yang bertugas memperbaharui data, data pelanggan dan tampilan sistem informasi serta
-        kinerja sistem. Data-data ini dipertanggungjawabkan oleh pihak Dinas Perdagangan Kota Malang dalam bentuk laporan.
-    2.2	Karakteristik Pengguna
-        Pembeli	: Melihat tampilan web, memberikan informasi harga daging :	Melakukan pendaftaran
-        Penjual Daging :	Memberikan informasi harga daging dan memberikan data tempat perdagangan :	Sign in sebagai pembeli
-        Admin :	Memperbarui kinerja sistem dan memperbarui data : Sign in sebagai admincontrol panel server, basis data informasi
-    2.3	Batasan
-        Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
-        1.	Tidak tersedia layanan jual beli 
-        2.	Aplikasi hanya menyediakan layanan informasi mengenai harga daging dan lokasi perdagangan daging
-        3.	Aplikasi menyediakan form bagi pembeli untuk mengisikan informasi mengenai harga daging.
-        4.	Sistem Informasi bisa dijalankan pada beberapa device yang berbeda.
-        5.	Aplikasi harus berfungsi pada platform Windows, Linux dan Android.
-    2.4	Lingkungan Operasi
-        Aplikasi client server ini akan berfungsi dengan spesifikasi
-        Server :
-          Komputer dengan spesifikasi hardware minimal sebagai berikut :
-          •	Processor Inter Core i3-2005U CPU 1.70GHz 
-          •	Motherboard support internet connection RAM 4 GB
-          •	500 GB Hard Disk utama Hard Disk Drive backup VGA Card 256 MB
-          •	NIC FastEthernet atau Gigabit Ethernet Mouse
-          •	Keyboard Monitor
-          •	Power Supply
-          •	Komputer yang minimal telah terinstall software sebagai berikut :
-          •	Browser Google Chrome/Mozilla Firefox PDF
-          •	Word Processor
-          •	Apache HTTP Server Mail Server
-          •	DBMS minimal MySQL 5.0.20 ke atas Koneksi internet dengan bandwidth 1 Mbps OS minimal Windows 2003 server atau Ubuntu Server
-       Client :
-        Device yang dapat terhubung internet
+2.1	Deskripsi Umum Sistem
+SHD merupakan sistem informasi berbasis web yang menyediakan daftar harga daging. Pengguna sistem informasi SHD dapat melakukan pendaftaran sebagai pembeli dan pendaftaran sebagai penjual daging. Pengguna yang telah terdaftar dapat melakukan sign in ke dalam sistem informasi SHD. Pembeli yang telah melakukan sign in dapat melihat informasi harga daging yang tersedia dalam sistem informasi. Informasi yang disediakan oleh sistem informasi meliputi harga daging dan lokasi penjualan daging. Pada aplikasi tersedia form yang ditujukan untuk pembeli guna diisi informasi mengenai harga daging yang ada dilapangan oleh pembeli. Notifikasi pembaruan informasi yang dilakukan pada sistem informasi akan dikirim melalui email pengguna. Apabila jumlah persediaan daging yang tersedia telah habis atau terbatas, maka aplikasi akan mengirimkan notifikasi perihal kondisi tersebut. Sistem ini dikelola oleh seorang admin yang bertugas memperbaharui data, data pelanggan dan tampilan sistem informasi serta kinerja sistem. Data-data ini dipertanggungjawabkan oleh pihak Dinas Perdagangan Kota Malang dalam bentuk laporan.
+2.2	Karakteristik Pengguna
+Tabel 3 Karakteristik Pengguna
+Kategori Pengguna	Tugas	Hak Akses ke Aplikasi
+Pembeli	Melihat tampilan web, memberikan informasi harga daging.	Melakukan pendaftaran
+Penjual Daging	Memberikan informasi harga daging dan memberikan data tempat perdagangan.	Sign in sebagai pembeli
+Admin	Memperbarui kinerja sistem dan memperbarui data.	Sign in sebagai admincontrol panel server, basis data informasi
+2.3	Batasan
+Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
+
+1.	Tidak tersedia layanan jual beli 
+2.	Aplikasi hanya menyediakan layanan informasi mengenai harga daging dan lokasi perdagangan daging
+
+3.	Aplikasi menyediakan form bagi pembeli untuk mengisikan informasi mengenai harga daging.
+
+4.	Sistem Informasi bisa dijalankan pada beberapa device yang berbeda.
+5.	Aplikasi harus berfungsi pada platform Windows, Linux dan Android.
+
+2.4	Lingkungan Operasi
+Aplikasi client server ini akan berfungsi dengan spesifikasi :
+Server :
+Komputer dengan spesifikasi hardware minimal sebagai berikut :
+•	Processor Inter Core i3-2005U CPU 1.70GHz 
+•	Motherboard support internet connection RAM 4 GB
+•	500 GB Hard Disk utama Hard Disk Drive backup VGA Card 256 MB
+•	NIC FastEthernet atau Gigabit Ethernet Mouse
+•	Keyboard Monitor
+•	Power Supply
+•	Komputer yang minimal telah terinstall software sebagai berikut :
+•	Browser Google Chrome/Mozilla Firefox PDF
+•	Word Processor
+•	Apache HTTP Server Mail Server
+•	DBMS minimal MySQL 5.0.20 ke atas Koneksi internet dengan bandwidth 1 Mbps OS minimal Windows 2003 server atau Ubuntu Server
+Client :
+Device yang dapat terhubung internet
 
 3.	Deskripsi Kebutuhan
-    3.1	Kebutuhan Antarmuka Eksternal
-        Sistem Informasi Stabilisasi Harga Daging ini membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut:
-        3.1.1 Antarmuka Pemakai
-              User interface yang digunakan untuk mengoperasikan Sistem Informasi Stabilisasi Harga Daging antara lain:
-              •	Tampilan awal web
-              •	Tampilan sign in
-              •	Tampilan pendaftaran
-              •	Tampilan Harga Daging
-              •	Tampilan Forum Jual Beli dan Diskusi
-              •	Tampilan Form Informasi Harga Pasar
-              •	Tampilan Grafik Diagram Harga
-              •	Tampilan Form Informasi
-              Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
-              •	Keyboard
-              •	Mouse
-              •	Monitor
-              •	PC/Laptop
-              •	Browser
-              •	Hp (jika mengakses via mobile)
-        3.1.2 Antarmuka Perangkat Keras
-              Antarmuka perangkat keras yang digunakan untuk mengoperasikan Sistem informasi ini antara lain:
-              •	NIC FastEthernet atau Gigabit Ethernet
-              •	Kabel LAN UTP RJ-45
-              •	ASDL Modem
-              •	Kabel telepon (aerial type)
-        3.1.3 Antarmuka Perangkat Lunak
-              Antarmuka perangkat lunak yang digunakan pada proses pembuatan aplikasi ini meliputi,
-              -	XAMPP
-              -	phpMyAdmin
-              -	OwnCloud
-        3.1.4 Antarmuka Komunikasi
-              Antarmuka komunikasi yang digunakan untuk mengoperasikan sistem informasi ini antara lain:
-              •	Kabel LAN UTP RJ-45
-              •	ASDL Modem
-              •	Kabel telepon (aerial type)
-    3.2	Kebutuhan Fungsional
-        3.2.1 Diagram Konteks
-        3.2.2 DFD Level I
-              (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.1	DFD Level 2 <Proses Pendaftaran>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.2	DFD Level 2 <Proses Lihat Harga Daging>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.3	DFD Level 2 <Proses Melihat Grafik Harga Daging>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.4	DFD Level 2 <Proses Memberikan post pada forum>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.5	DFD Level 2 <Proses Pengisian Informasi>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-              3.2.2.6	DFD Level 2 <Menyortir Harga yang Dicari Berdasarkan Daerah>
-                      (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-    3.3	Kebutuhan Data
-        3.2.1 E-R Diagram
-              (terlampir pada document dengan format .docx atau dapat diliat melalui google drive)
-    3.4	Kebutuhan Nonfungsional
-    3.5	Batas Perancangan
-        Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Stabilisasi Harga Daging antara lain.
-        Tampilan web dibuat dengan menggunakan photoshop dan illustrator
-        Text editor yang digunakan adalah Dreamweaver
+3.1	Kebutuhan Antarmuka Eksternal
+Sistem Informasi Stabilisasi Harga Daging ini membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut:
+3.1.1	Antarmuka Pemakai
+User interface yang digunakan untuk mengoperasikan Sistem Informasi Stabilisasi Harga Daging antara lain:
+•	Tampilan awal web
+•	Tampilan sign in
+•	Tampilan pendaftaran
+•	Tampilan Harga Daging
+•	Tampilan Forum Jual Beli dan Diskusi
+•	Tampilan Form Informasi Harga Pasar
+•	Tampilan Grafik Diagram Harga
+•	Tampilan Form Informasi
+Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
+•	Keyboard
+•	Mouse
+•	Monitor
+•	PC/Laptop
+•	Browser
+•	Hp (jika mengakses via mobile)
+3.1.2	Antarmuka Perangkat Keras
+Antarmuka perangkat keras yang digunakan untuk mengoperasikan Sistem informasi ini antara lain:
+•	NIC FastEthernet atau Gigabit Ethernet
+•	Kabel LAN UTP RJ-45
+•	ASDL Modem
+•	Kabel telepon (aerial type)
+3.1.3	Antarmuka Perangkat Lunak
+Antarmuka perangkat lunak yang digunakan pada proses pembuatan aplikasi ini meliputi,
+-	XAMPP
+-	phpMyAdmin
+-	OwnCloud
+3.1.4	Antarmuka Komunikasi
+Antarmuka komunikasi yang digunakan untuk mengoperasikan sistem informasi ini antara lain:
+•	Kabel LAN UTP RJ-45
+•	ASDL Modem
+•	Kabel telepon (aerial type)
 
-          
+3.2	Kebutuhan Fungsional
+Tabel 4 Kebutuhan Fungsional
+ID	Kebutuhan	Penjelasan
+SRS-F-OUT-001	Perangkat lunak bisa menampilkan form login	Apabila pengguna sudah memiliki akun pada sistem informasi maka sistem akan menampilkan form login
+SRS-F-OUT-002	Perangkat lunak bisa menampilkan form pendaftaran sebagai pengguna.	Apabila pengguna belum memiliki akun pada sistem informasi akan menampilkan form pendaftaran.
+SRS-F-IN-003	Perangkat lunak dapat menerima masukan dari pengguna.	Informasi dari pengguna berupa data daging dan identitas diri dapat diinputkan kedalam sistem infornasi
+SRS-F-OUT-005	Sistem menampilkan harga standar daging pada periode tersebut.	Berdasarkan harga yang telah dimasukkan oleh dinas dan pengguna baik pembeli maupun penjual sistem akan menampilkan harga standard daging pada periode tersebut.
+SRS-F-PR-006	Sistem menyediakan menu pencaraian	Menu pencarian yang disediakan oleh sistem berguna untuk melakukan tendarian terhadap data lokasi perdagangan dan harga daging.
+SRS-F-OUT-007	Sistem dapat menampilkan informasi cara memilih daging yang baik	Data informasi yang disajikan berasal dari admin dinas perdagangan.
+SRS-F-IN-008	Sistem dapat menerima masukan data dari pengguna	Data yang dimasukan oleh pengguna meliputi
+SRS-F-PR-009	Sistem dapat menyimpan data pengguna	Data yang perasal dari pengguna akan disimpan pada sistem perangkat lunak.
+SRS-F-OUT-010	Perangkat lunak akan mengirimkan notifikasi apabila terjadi pembaruan data	Apabila pihak dinas melakukan pembaruan data harga daging maka notifikasi akan dikirimkan pada pengguna perangkat lunak.
+
+3.2.1	Diagram Konteks
+ 
+Gambar 1. Diagram konteks Sistem Kerja dari Sistem Informasi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2.2	DFD Level 1
+ 
+Gambar 2. DFD Level 1 Sistem Kerja dari Sistem Informasi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2.2.1	DFD Level 2 <Proses Pendaftaran>
+ 
+Gambar 3. DFD Level 2 Sistem Kerja dari Pendaftaran
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2.2.2	DFD Level 2 <Proses Pengisian Informasi>
+ 
+Gambar 4. DFD Level 2 Sistem Kerja dari Proses Pengisian Form Informasi
+
+3.2.3	Spesifikasi Proses (P-SPEC)
+KODE BUBLE	DESCRIPTION
+DFD-0-1	Proses ini merupakan gambaran sistem secara keseluruhan. Melibatkan terminator serta data flow yang keluar-masuk kedalam sistem. Buble 0 akan dideskripsikan pada DFD level selanjutnya agar bisa memberikan gambaran secara lebih rinci dan spesifik.
+DFD-1-1	Terminator yang dapat melakukan pilihan input yang berfungsi untuk melakukan pendaftaran akun.
+DFD-1-2	Terminator yang dapat melakukan input data berupa informasi data harga daging baik oleh pembeli maupun penjual daging.
+DFD-1-2.1	Pembeli maupun penjual dapat memberikan informasi daging pada sistem
+DFD-1-2.2	Apabila pengguna telah terdaftarsebagai anggota dalam sistem tersebut maka pengguna akan mendapatkan kartu anggota yang dapat dicetak
+DFD-1-2.3	Data keanggotaan dari pengguna sistem dapat diarsipkan dengan cara dicetak apabila diperlukan.
+DFD-2-2.1	
+
+3.2.4	Data Store
+Data Store	Deskripsi
+T_Anggota	Berisi deskripsi pendaftaran akun meliputi nama, email dan password.
+T_Daging	Berisi deskripsi aktifitas yang dilakukan sistem informasi meliputi lokasi penjualan daging, harga daging dari pembeli dan penjual
+
+3.3	Kebutuhan Data
+3.3.1	E-R Diagram
+ 
+3.4	Kebutuhan Non Fungsional
+Kebutuhan non fungsional yang terdapat pada perangkat lunak SDH antara lain sebagai berikut.
+Tabel 7 Kebutuhan non fungsional
+ID	Parameter	Kebutuhan
+SRS-NF-OUT-011	Availability	Perangkat lunak dapat beroperasi setiap hari dan setiap jam.
+SRS-NF-OUT-012	Ergonomy	Tampilan antarmuka perangkat lunak SHD mudah dipahami dan dioperasikan user.
+SRS-NF-PR-013	Portability	Perangkat lunak bisa dioperasikan pada platform android
+SRS-NF-PR-014	Response time	Perangkat lunak akan mengirimkan notifikasi atau peringatan apabila terjadi perubahan data atau informasi pada perangkat lunak
+SRS-NF-PR-015	Response time	Perangkat lunak dapat melakukan ypdate data
+SRS-NF-PR-016	Security	Perangkat lunak menggunakan standar enkripsi yang ada
+SRS-NF-IN-017	Security	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 6 karakter
+SRS-NF-OUT-018	Other 1 : Bahasa Komunikasi	Bahasa yang disediakan pada perangkat lunak menggunakan bahasa Indonesia
+SRS-NF-OUT-019	Other 2 : Tampilan Logo	Setiap layer harus menggunakan logo dari Dinas Perdagangan Kota Malang
+
+3.5	Batasan Perancangan
+Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Stabilisasi Harga Daging antara lain.
+Tampilan web dibuat dengan menggunakan photoshop dan illustrator
+Text editor yang digunakan adalah Dreamweaver
+3.6	Kerunutan (Traceability)
+Berikut ini adalah tabel yang berisi traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.
+3.6.1	Kebutuhan Fungsional vs Proses
+Mapping kebutuhan fungsional dengan proses pada DFD untuk perangkat lunak SHD adalah sebagai berikut.
+Tabel 8 Kebutuhan Fungsional vs proses
+ID Kebutuhan Fungsional	Nomor Proses pada DFD
+SRS-F-OUT-001	DFD-2-2.1
+SRS-F-OUT-002	DFD-2-2.2
+SRS-F-IN-003	DFD-2-2.3
+SRS-F-PR-004	DFD-2-2.3
+SRS-F-OUT-005	DFD-2-5.1, DFD-2-5.2
+SRS-F-PR-006	DFD-2-5.3
+SRS-F-IN-007	DFD-2-2.3
+SRS-F-OUT-008	DFD-2-3.1
+SRS-F-PR-009	DFD-2-5.1, DFD-2-5.2
+SRS-F-PR-010	DFD-2-4.2
+SRS-F-PR-011	DFD-2-3.2
+
+3.6.2	Data Store vs E-R
+Mapping data store DFD dengan Entity-Relasi untuk perangkat lunak SHD adalah sebagai berikut :
+Tabel 9 Data store vs E-R
+Data Store	Entity	Relasi
+T_Harga		
+T_Daging		
+
+3.7	Ringkasan Kebutuhan
+Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional 
+dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi,
+dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua
+kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan perangkat lunak Super
+SHD.
+3.7.1	Kebutuhan Fungsional
+ID	Kebutuhan
+SRS-F-OUT-001	Perangkat lunak bisa menampilkan form login
+SRS-F-OUT-002	Perangkat lunak bisa menampilkan form pendaftaran sebagai pengguna.
+SRS-F-IN-003	Perangkat lunak dapat menerima masukan dari pengguna.
+SRS-F-OUT-005	Sistem menampilkan harga standar daging pada periode tersebut.
+SRS-F-PR-006	Sistem menyediakan menu pencaraian
+SRS-F-OUT-007	Sistem dapat menampilkan informasi cara memilih daging yang baik
+SRS-F-IN-008	Sistem dapat menerima masukan data dari pengguna
+SRS-F-PR-009	Sistem dapat menyimpan data pengguna
+SRS-F-OUT-010	Perangkat lunak akan mengirimkan notifikasi apabila terjadi pembaruan data
+3.7.2	Kebutuhan Non Fungsional
+ID	Kebutuhan
+SRS-NF-OUT-011	Perangkat lunak dapat beroperasi setiap hari dan setiap jam.
+SRS-NF-OUT-012	Tampilan antarmuka perangkat lunak SHD mudah dipahami dan dioperasikan user.
+SRS-NF-PR-013	Perangkat lunak bisa dioperasikan pada platform android
+SRS-NF-PR-014	Perangkat lunak akan mengirimkan notifikasi atau peringatan apabila terjadi perubahan data atau informasi pada perangkat lunak
+SRS-NF-PR-015	Perangkat lunak dapat melakukan ypdate data
+SRS-NF-PR-016	Perangkat lunak menggunakan standar enkripsi yang ada
+SRS-NF-IN-017	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 6 karakter
+SRS-NF-OUT-018	Bahasa yang disediakan pada perangkat lunak menggunakan bahasa Indonesia
+SRS-NF-OUT-019	Setiap layer harus menggunakan logo dari Dinas Perdagangan Kota Malang
+
